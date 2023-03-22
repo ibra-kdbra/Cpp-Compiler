@@ -1,0 +1,72 @@
+line no: 1
+Line no 1: Token <STRING> Lexeme "" found --> <STRING, "">
+
+line no: 3
+Line no 3: Token <STRING> Lexeme "abc" found --> <STRING, "abc">
+
+line no: 5
+Line no 5: Token <STRING> Lexeme "ab\td" found --> <STRING, "ab	d">
+
+line no: 9
+Line no 9: Token <STRING> Lexeme "abc\
+def\
+ghi" found --> <STRING, "abcdefghi">
+
+line no: 12
+Error at line no 11: Unterminated String "abcd\
+efgh
+
+Line no 13: Token <ID> Lexeme ijk found
+
+ScopeTable # 1
+ 4 --> < ijk : ID> 
+
+line no: 13
+Error at line no 13: Unterminated String "
+
+line no: 16
+Line no 16: Token <STRING> Lexeme "He said, \" I own a dog\"\
+    so I asked, \"What is his name?\"" found --> <STRING, "He said, " I own a dog"    so I asked, "What is his name?"">
+
+Line no 18: Token <COMMENT> Lexeme //\
+hi\
+hello found
+
+Line no 21: Token <ID> Lexeme kop found
+
+ScopeTable # 1
+ 4 --> < ijk : ID> 
+ 5 --> < kop : ID> 
+
+Line no 23: Token <COMMENT> Lexeme // ddsfdlkj138us found
+
+Line no 25: Token <COMMENT> Lexeme // wherew are klk\
+sfklsjf found
+
+Line no 27: Token <ID> Lexeme asdffs found
+
+ScopeTable # 1
+ 1 --> < asdffs : ID> 
+ 4 --> < ijk : ID> 
+ 5 --> < kop : ID> 
+
+Error at line no 29: Unterminated Comment /* sdfkslfj
+sfslkdjfslf***/
+
+/*slfjaksf
+srksljfds
+
+// erlewkrj
+
+ScopeTable # 1
+ 1 --> < asdffs : ID> 
+ 4 --> < ijk : ID> 
+ 5 --> < kop : ID> 
+
+ScopeTable # 1
+ 1 --> < asdffs : ID> 
+ 4 --> < ijk : ID> 
+ 5 --> < kop : ID> 
+
+Total lines: 35
+Total errors: 3

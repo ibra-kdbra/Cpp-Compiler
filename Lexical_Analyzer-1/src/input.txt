@@ -1,0 +1,35 @@
+""
+
+"abc"
+
+"ab\td"
+
+"abc\
+def\
+ghi"
+
+"abcd\
+efgh
+ijk"
+
+"He said, \" I own a dog\"\
+    so I asked, \"What is his name?\""
+
+//\
+hi\
+hello
+kop
+
+// ddsfdlkj138us
+
+// wherew are klk\
+sfklsjf
+asdffs
+
+/* sdfkslfj
+sfslkdjfslf***/
+
+/*slfjaksf
+srksljfds
+
+// erlewkrj

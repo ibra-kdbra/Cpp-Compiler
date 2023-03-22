@@ -1,0 +1,1 @@
+<STRING, ""> <STRING, "abc"> <STRING, "ab	d"> <STRING, "abcdefghi"> <ID, ijk> <STRING, "He said, " I own a dog"    so I asked, "What is his name?""> <ID, kop> <ID, asdffs> 
