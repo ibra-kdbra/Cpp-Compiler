@@ -1,0 +1,6 @@
+Error at line 7: Type mismatch
+
+Error at line 13: Non-Integer operand on modulus operator
+
+Error at line 14: Void function used in expression
+

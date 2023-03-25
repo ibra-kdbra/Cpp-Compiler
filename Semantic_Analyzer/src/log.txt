@@ -1,0 +1,382 @@
+Line 1: type_specifier : VOID
+
+void
+
+Line 3: compound_statement : LCURL RCURL
+
+{}
+
+ScopeTable # 1.1
+
+ScopeTable # 1
+ 24 --> < test : ID> 
+
+Line 3: func_definition : type_specifier ID LPAREN RPAREN compound_statement
+
+void test(){}
+
+Line 3: unit : func_definition
+
+void test(){}
+
+Line 3: program : unit
+
+void test(){}
+
+Line 4: type_specifier : INT
+
+int
+
+Line 6: type_specifier : INT
+
+int
+
+Line 6: declaration_list : ID
+
+a
+
+Line 6: var_declaration : type_specifier declaration_list SEMICOLON
+
+int a;
+
+Line 6: statement : var_declaration
+
+int a;
+
+Line 6: statements : statement
+
+int a;
+
+Line 7: variable : ID
+
+a
+
+Line 7: factor : CONST_FLOAT
+
+2.5
+
+Line 7: unary_expression : factor
+
+2.5
+
+Line 7: term : unary_expression
+
+2.5
+
+Line 7: simple_expression : term
+
+2.5
+
+Line 7: rel_expression : simple_expression
+
+2.5
+
+Line 7: logic_expression : rel_expression
+
+2.5
+
+Line 7: expression : variable ASSIGNOP logic_expression
+
+a=2.5
+
+Error at line 7: Type mismatch
+
+Line 7: expression_statement : expression SEMICOLON
+
+a=2.5;
+
+Line 7: statement : expression_statement
+
+a=2.5;
+
+Line 7: statements : statements statement
+
+int a;
+a=2.5;
+
+Line 8: type_specifier : FLOAT
+
+float
+
+Line 8: declaration_list : ID
+
+b
+
+Line 8: var_declaration : type_specifier declaration_list SEMICOLON
+
+float b;
+
+Line 8: statement : var_declaration
+
+float b;
+
+Line 8: statements : statements statement
+
+int a;
+a=2.5;
+float b;
+
+Line 9: variable : ID
+
+b
+
+Line 9: factor : CONST_INT
+
+2
+
+Line 9: unary_expression : factor
+
+2
+
+Line 9: term : unary_expression
+
+2
+
+Line 9: simple_expression : term
+
+2
+
+Line 9: rel_expression : simple_expression
+
+2
+
+Line 9: logic_expression : rel_expression
+
+2
+
+Line 9: expression : variable ASSIGNOP logic_expression
+
+b=2
+
+Line 9: expression_statement : expression SEMICOLON
+
+b=2;
+
+Line 9: statement : expression_statement
+
+b=2;
+
+Line 9: statements : statements statement
+
+int a;
+a=2.5;
+float b;
+b=2;
+
+Line 12: type_specifier : INT
+
+int
+
+Line 12: declaration_list : ID
+
+c
+
+Line 12: var_declaration : type_specifier declaration_list SEMICOLON
+
+int c;
+
+Line 12: statement : var_declaration
+
+int c;
+
+Line 12: statements : statements statement
+
+int a;
+a=2.5;
+float b;
+b=2;
+int c;
+
+Line 13: variable : ID
+
+c
+
+Line 13: factor : CONST_INT
+
+5
+
+Line 13: unary_expression : factor
+
+5
+
+Line 13: term : unary_expression
+
+5
+
+Line 13: factor : CONST_FLOAT
+
+2.0
+
+Line 13: unary_expression : factor
+
+2.0
+
+Line 13: term : term MULOP unary_expression
+
+5%2.0
+
+Error at line 13: Non-Integer operand on modulus operator
+
+Line 13: simple_expression : term
+
+5%2.0
+
+Line 13: rel_expression : simple_expression
+
+5%2.0
+
+Line 13: logic_expression : rel_expression
+
+5%2.0
+
+Line 13: expression : variable ASSIGNOP logic_expression
+
+c=5%2.0
+
+Line 13: expression_statement : expression SEMICOLON
+
+c=5%2.0;
+
+Line 13: statement : expression_statement
+
+c=5%2.0;
+
+Line 13: statements : statements statement
+
+int a;
+a=2.5;
+float b;
+b=2;
+int c;
+c=5%2.0;
+
+Line 14: variable : ID
+
+c
+
+Line 14: argument_list :
+
+
+
+Line 14: factor : ID LPAREN argument_list RPAREN
+
+test()
+
+debug: Line 14: test() : void
+
+Line 14: unary_expression : factor
+
+test()
+
+Line 14: term : unary_expression
+
+test()
+
+Line 14: simple_expression : term
+
+test()
+
+Line 14: rel_expression : simple_expression
+
+test()
+
+Line 14: logic_expression : rel_expression
+
+test()
+
+Line 14: expression : variable ASSIGNOP logic_expression
+
+c=test()
+
+Error at line 14: Void function used in expression
+
+Line 14: expression_statement : expression SEMICOLON
+
+c=test();
+
+Line 14: statement : expression_statement
+
+c=test();
+
+Line 14: statements : statements statement
+
+int a;
+a=2.5;
+float b;
+b=2;
+int c;
+c=5%2.0;
+c=test();
+
+Line 15: compound_statement : LCURL statements RCURL
+
+{
+int a;
+a=2.5;
+float b;
+b=2;
+int c;
+c=5%2.0;
+c=test();
+}
+
+
+ScopeTable # 1.2
+ 7 --> < a : ID> 
+ 8 --> < b : ID> 
+ 9 --> < c : ID> 
+
+ScopeTable # 1
+ 23 --> < fun : ID> 
+ 24 --> < test : ID> 
+
+Line 15: func_definition : type_specifier ID LPAREN RPAREN compound_statement
+
+int fun(){
+int a;
+a=2.5;
+float b;
+b=2;
+int c;
+c=5%2.0;
+c=test();
+}
+
+
+Line 15: unit : func_definition
+
+int fun(){
+int a;
+a=2.5;
+float b;
+b=2;
+int c;
+c=5%2.0;
+c=test();
+}
+
+
+Line 15: program : program unit
+
+void test(){}
+int fun(){
+int a;
+a=2.5;
+float b;
+b=2;
+int c;
+c=5%2.0;
+c=test();
+}
+
+
+Line 15: start : program
+
+
+
+ScopeTable # 1
+ 23 --> < fun : ID> 
+ 24 --> < test : ID> 
+
+Total Lines: 15
+Total Errors: 3

@@ -1,0 +1,15 @@
+void test(){
+
+}
+int fun(){
+	// type conversion
+	int a;
+	a = 2.5;
+	float b;
+	b = 2;
+
+	// type checking
+	int c;
+	c = 5%2.0;
+	c = test();
+}
