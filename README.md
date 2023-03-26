@@ -5,7 +5,8 @@ Lexical - Syntax - Symantic Analyzer, then Intermediate Generation Code.
 
 In the last order, each folder has been implemented to the next folder(Layer).
 
-# For running ./run.sh  in any of the directoires:
+# For running ./run.sh  in any of the directoires: 
+-- of course in each of the src directory
 # Using Linux
 ```
 Use : chmod 770 * to access all the files that you want to run
